@@ -40,8 +40,8 @@
 					if(isset($_SESSION["TYPE"]) && $_SESSION["TYPE"] == 1){
 						$idUsuario = $_SESSION["ID_USUARIO"];
 						$nombre = $_SESSION["NOMBRE"];
-						$apellido1 = $_SESSION["APELLIDO1"];
-						$apellido2 = $_SESSION["APELLIDO2"];
+						$apellido1 = $_SESSION["APELLIDO_1"];
+						$apellido2 = $_SESSION["APELLIDO_2"];
 						$telefono = $_SESSION["TELEFONO"];
 						$correo = $_SESSION["CORREO"];
 						
