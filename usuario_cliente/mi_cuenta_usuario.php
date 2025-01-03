@@ -24,7 +24,7 @@
 					if(isset($_SESSION["TYPE"]) && $_SESSION["TYPE"] == 1){
 						$TYPE = $_SESSION["TYPE"];
 					}else{
-						header("Location: index.php");
+						header("Location: ../usuario_global/index.php");
 						exit();
 					}
 					require_once('Constantes.php');
@@ -33,7 +33,7 @@
 				?>
 				<div id="main">
 				<?php
-					require_once('Conexion.php');
+					require_once('../usuario_global/Conexion.php');
 					$base = new Conexion();
 					$conn = $base->getConn();
 					
@@ -54,7 +54,7 @@
 					}else{
 						echo "No has iniciado sesión";
 						echo $_SESSION["TYPE"]."nada";
-						header("Location: index.php");
+						header("Location: ../usuario_global/index.php");
 						exit();
 					}
 				?>
@@ -146,7 +146,7 @@
 				<section id="sidebar">
 				
 					<?php
-						$file_contents = file_get_contents('footer.txt');
+						$file_contents = file_get_contents('../footer.txt');
 						echo $file_contents;
 					?>
 				</section>
@@ -155,11 +155,11 @@
 			
 			
 				
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>

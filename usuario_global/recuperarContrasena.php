@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<?php
-		require_once('Constantes.php');
+		require_once('../usuario_cliente/Constantes.php');
 		$header = new Constantes();
 		$header->getImports();
 		?>
@@ -25,10 +25,10 @@
 				$base = new Conexion();
 				$conn = $base->getConn();
 				
-				require_once('Constantes.php');
+				require_once('../usuario_cliente/Constantes.php');
 				$header = new Constantes();
 				$header->getHeader($TYPE);
-				$userMail = $_POST['userMail'];
+				$userMail = $_POST['userMail'] ?? null;
 				if($userMail != ""){
 					
 					$stmt = $conn->prepare("CALL ObtenerContrasena(?)");
@@ -109,18 +109,18 @@
 				<!-- Sidebar -->
 				<section id="sidebar">
 					<?php
-						$file_contents = file_get_contents('footer.txt');
+						$file_contents = file_get_contents('../footer.txt');
 						echo $file_contents;
 					?>
 				</section>
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>

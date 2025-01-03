@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<?php
-		require_once('Constantes.php');
+		require_once('../usuario_cliente/Constantes.php');
 		$header = new Constantes();
 		$header->getImports();
 		session_start();
@@ -26,10 +26,10 @@
 			$base = new Conexion();
 			$conn = $base->getConn();
 
-			$nombre = $_POST["nombre"];
-			$apellido1 = $_POST["apellido1"];
-			$apellido2 = $_POST["apellido2"];
-			$telefono = $_POST["telefono"];
+			$nombre = $_POST["Nombre"];
+			$apellido1 = $_POST["Apellido_1"];
+			$apellido2 = $_POST["Apellido_2"];
+			$telefono = $_POST["Telefono"];
 
 			$calle = $_POST["calle"];
 			$numeroExt = $_POST["numeroExt"];
@@ -156,7 +156,7 @@
 				</article>
 				<section id="sidebar">
 					<?php
-						$file_contents = file_get_contents('footer.txt');
+						$file_contents = file_get_contents('../footer.txt');
 						echo $file_contents;
 					?>
 				</section>

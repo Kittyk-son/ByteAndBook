@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<?php
-		require_once('Constantes.php');
+		require_once('../usuario_cliente/Constantes.php');
 		$header = new Constantes();
 		$header->getImports();
 		?>
@@ -26,18 +26,18 @@
 		
 		session_start();
 		if(isset($_SESSION["TYPE"]) && $_SESSION["TYPE"] == 1){
-			header("Location: inicio_usuario.php");
+			header("Location: ../usuario_cliente/inicio_usuario.php");
 			exit();
 		}else if(isset($_SESSION["TYPE"]) && $_SESSION["TYPE"] == 2){
-			header("Location: inicio_bibliotecario.php");
+			header("Location: ../usuario_bibliotecario/inicio_bibliotecario.php");
 			exit();
 		}else if(isset($_SESSION["TYPE"]) && $_SESSION["TYPE"] == 3){
-			header("Location: inicio_administrador.php");
+			header("Location: ../usuario_admin/inicio_administrador.php");
 			exit();
 		}
 		
-		$userMail = $_POST['userMail'];
-		$userPassword = $_POST['userPassword'];
+		$userMail = $_POST['userMail'] ?? null;
+		$userPassword = $_POST['userPassword'] ?? null; 
 		if($userMail != "" && $userPassword != ""){
 			// echo "Datos recibidos\n";
 			// echo $userMail.'\n';
@@ -105,13 +105,13 @@
 				</script>";
 				
 				if($tipo == 1){
-					header("Location: inicio_usuario.php");
+					header("Location: ../usuario_cliente/inicio_usuario.php");
 					exit();
 				}else if($tipo == 2){
-					header("Location: inicio_bibliotecario.php");
+					header("Location: ../usuario_bibliotecario/inicio_bibliotecario.php");
 					exit();
 				}else if($tipo == 3){
-					header("Location: inicio_administrador.php");
+					header("Location: ../usuario_administrador/inicio_administrador.php");
 					exit();
 				}
 			} else {
@@ -145,7 +145,7 @@
 											<div class = "row gtr-uniform wrap">
 												<div class="col-3 col-2-small"></div>
 												<div class="col-8">
-												<a href="#" class=""><img src="images/logo.jpg" alt="logo de la compañia" /></a>
+												<a href="#" class=""><img src="../images/logo.jpg" alt="logo de la compañia" /></a>
 													
 													<h1>Bienvenido a Byte & Book</h1>
 													<p>Tu servicio de libros favorito</a></p>

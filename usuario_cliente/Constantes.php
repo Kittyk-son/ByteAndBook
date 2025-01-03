@@ -15,7 +15,7 @@
 					</nav>";
 		
 		public $header = "<header id='header'>
-					<h1><a href='index.php'> Byte & Book </a></h1>";
+					<h1><a href='../usuario_global/index.php'> Byte & Book </a></h1>";
 		public $headerEnd = "</header>";
 
 		
@@ -82,7 +82,7 @@
 		
 			
 		public function getImports(){
-			echo "<link rel='stylesheet' href='assets/css/main.css' />
+			echo "<link rel='stylesheet' href='../assets/css/main.css' />
 			<link rel='stylesheet' href='style.css' />
 		<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
 		<script>

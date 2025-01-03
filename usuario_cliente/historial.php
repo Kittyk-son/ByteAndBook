@@ -17,7 +17,7 @@
 	</head>
 	<body class="is-preload">
 		<?php
-			require_once('Conexion.php');
+			require_once('../usuario_global/Conexion.php');
 			$base = new Conexion();
 			$conn = $base->getConn();
 			
@@ -26,7 +26,7 @@
 				$TYPE = $_SESSION["TYPE"];
 			}else{
 				echo "No has iniciado sesión";
-				header("Location: index.php");
+				header("Location: ../usuario_global/index.php");
 				exit();
 			}
 		?>
@@ -58,7 +58,7 @@
 				</div>
 				<section id="sidebar">
 					<?php
-						$file_contents = file_get_contents('footer.txt');
+						$file_contents = file_get_contents('../footer.txt');
 						echo $file_contents;
 					?>
 				</section>
@@ -68,11 +68,11 @@
 			
 			
 				
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>
